@@ -107,6 +107,7 @@ public class Home_price {
     // To recognize every window and calculate the sum for every one of them
     private static void calculateSum(int[] b, int counter){
         int u = 0;
+        //preSum stores the sum for the previous window in the loop
         int preSum = 0;
         //If this is the last level
         if ((k +1 -counter ) == 1) {
@@ -126,8 +127,11 @@ public class Home_price {
                     preSum = u;
                     u = 0;
                 } else {
+                    // y is the first element in the previous window in the loop
                     int y = b[j - 1];
+                    // a is the sum for the window without the last element
                     int a = preSum - y;
+                    // so a + last element of the window is the sum for the whole window
                     int sum = a + (b[j + k - counter]);
                     windows[j]= windows[j] + sum;
                     preSum = sum;
