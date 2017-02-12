@@ -26,6 +26,7 @@ public class Home_price {
         for(int i=0;i<n;i++){
 
             list[i]=r.nextInt(999999)+1;
+
         }
         // Initialize windows array
         for (int i = 0; i < n - k + 1; i++) {
@@ -95,17 +96,17 @@ public class Home_price {
             }
         }
         if(counter == 2){
-            calculateSum(li,counter);
+            calculateSum(li);
         }
         counter++;
         virtualCounter++;
-        calculateSum(nextLevel, counter);
+        calculateSum(nextLevel);
         recursive(nextLevel);
         return;
     }
 
     // To recognize every window and calculate the sum for every one of them
-    private static void calculateSum(int[] b, int counter){
+    private static void calculateSum(int[] b){
         int u = 0;
         //preSum stores the sum for the previous window in the loop
         int preSum = 0;
