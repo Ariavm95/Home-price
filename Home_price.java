@@ -6,12 +6,12 @@ import java.util.Random;
  */
 public class Home_price {
 
-    static int counter = 0;
-    static int virtualCounter=0;
-    static int [] bigkArray;
-    static boolean bigk=false;
-    static int[] windows ;
-    static int k=0;
+    static private int counter = 0;
+    static private int virtualCounter=0;
+    static private int [] bigkArray;
+    static private boolean bigk=false;
+    static private int[] windows ;
+    static private int k=0;
 
     public static void main(String[] args) {
         //n, k for sample data
@@ -54,7 +54,7 @@ public class Home_price {
     private static int[] calculateForTwo(int [] list) {
 
         int[] level2 = new int[(list.length)-1];
-        int output = 0;
+        ;
         for (int i = 0; i < (list.length - 1); i++) {
 
             if (list[i] > list[i + 1]) {
@@ -102,7 +102,7 @@ public class Home_price {
         virtualCounter++;
         calculateSum(nextLevel);
         recursive(nextLevel);
-        return;
+
     }
 
     // To recognize every window and calculate the sum for every one of them
