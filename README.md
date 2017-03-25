@@ -2,5 +2,5 @@
 
 https://www.amne.co/challenge/
 
-## Find the algorithm explanation in the file [Algorithm.txt](/Algorithm.txt)
+## Find an explaination of the algorithm  in the file [Algorithm.txt](/Algorithm.txt)
 
