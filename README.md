@@ -2,27 +2,5 @@
 # (See this in RAW mode)
 https://www.amne.co/challenge/
 
-I’m going to explain my algorithm by an example.
-Assume the input is [1,3,8,2,7,6,8,10,7,6], and window is 5.
-First, we compare the array two by two. If first array is larger, the output is 1, and if it’s smaller, the output will be -1, and if both are equal, the output will be 0. Then we run a recursive method on it.
-
-1, 3-> 1
-		        (1, 3, 8)-> 1 &1 =1    
-3, 8-> 1					        (1, 3, 8, 2)--> 1 & 0= 0
-		        (3, 8 ,2)-> 1 & -1 =0                               		(1, 3, 8, 2, 7)-->0 & 0= 0
-8, 2->  -1					        (3, 8, 2, 7)--> 0 & 0= 0
-		        (8, 2, 7)-> -1 & 1 =0                               		(3, 8, 2, 7, 6)-->0 & 0= 0
-2, 7->  1					        (8, 2, 7, 6)--> 0 & 0= 0
-		        (2, 7, 6)-> 1 & -1 =0                               		(8, 2, 7, 6, 8)-->0 & 0= 0
-7, 6->  -1					        (2, 7, 6, 8)-->0 & 0= 0
-		        (7, 6, 8)-> -1 & 1= 0                               		(2, 7, 6, 8, 10)-->0 & 0= 0
-6, 8->  1					        (7, 6, 8,10)-->0 & 1= 0
-		        (6, 8, 10)-> 1 & 1 =1                               		(7, 6, 8, 10, 7)-->0 & 0= 0
-8, 10->  1					         (6, 8, 10, 7)-->1 & -1= 0
-		        (8, 10, 7)-> 1& -1 =0                               		(6, 8, 10, 7, 6)-->0 & 0= 0
-10, 7->  -1					         (8, 10, 7, 6)-->0 & -1= 0
-		        (10, 7, 9)-> -1 & -1 = -1
-7, 6->  -1
-
-We eventually have n - k +1 windows. For for the first window (1, 3)+(3, 8)+(8, 2)+(2, 7) + (1, 3, 8)+ (3, 8 ,2) + (8, 2, 7) + (1, 3, 8, 2)+ (3, 8, 2, 7)+ (1, 3, 8, 2, 7). For the second window, we have (3, 8)+(8, 2)+(2, 7) + (7, 6) + .... Since we already calculated (3, 8)+(8, 2)+(2, 7) in the first window, we don't need to do it for the second window. Let's A be (1, 3)+(3, 8)+(8, 2)+(2, 7), so for the second window, we calculate this, A - (1, 3) +(7, 6) +.... So insted of having k-1 numbers to add, we get 3 numbers to add for the all windows except the first one. This is true for other levels in the recursive method. 
- 
+## Find the algorithm explanation in the file algorithm.txt
+[Algorithm](Home-price/algorithm.txt)
