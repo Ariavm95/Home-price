@@ -1,6 +1,7 @@
 # Home-price
+# (See this in RAW mode)
 https://www.amne.co/challenge/
-(See this in RAW mode)
+
 I’m going to explain my algorithm by an example.
 Assume the input is [1,3,8,2,7,6,8,10,7,6], and window is 5.
 First, we compare the array two by two. If first array is larger, the output is 1, and if it’s smaller, the output will be -1, and if both are equal, the output will be 0. Then we run a recursive method on it.
