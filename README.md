@@ -26,3 +26,4 @@ First, we compare the array two by two. If first array is larger, the output is 
 
 We eventually have n - k +1 windows. For for the first window (1, 3)+(3, 8)+(8, 2)+(2, 7) + (1, 3, 8)+ (3, 8 ,2) + (8, 2, 7) + (1, 3, 8, 2)+ (3, 8, 2, 7)+ (1, 3, 8, 2, 7). For the second window, we have (3, 8)+(8, 2)+(2, 7) + (7, 6) + .... Since we already calculated (3, 8)+(8, 2)+(2, 7) in the first window, we don't need to do it for the second window. Let's A be (1, 3)+(3, 8)+(8, 2)+(2, 7), so for the second window, we calculate this, A - (1, 3) +(7, 6) +.... So insted of having k-1 numbers to add, we get 3 numbers to add for the all windows except the first one. This is true for other levels in the recursive method. 
  
+ 
